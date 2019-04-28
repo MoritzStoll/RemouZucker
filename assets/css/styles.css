@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+}
+
+.buyPanel {
+    width: 50vw;
+    height: 100vh;
+    margin:0;
+    opacity: 0.4;
+    transition: opacity 300ms 
+}
+.buyPanel:hover {
+    opacity: 1;
+}
+
+h2.titel {
+    
+    font-family: Helvetica, sans-serif;
+    font-size: 6em;
+    word-wrap: break-word;
+    height: 100%;
+    width: 100%;
+    color: white;
+    transition: opacity 1000ms;
+    transition: color 1000ms;
+}
+h2.titel:hover {
+    opacity: 1;
+    color: rgb(255, 142, 176);
+}
+#decisionImage.imagePanel {
+    height: 100vh;
+    width: 33.33333vw !important;
+    object-fit: cover;
+    object-position: top center;
+
+}
+
+.imagePanel {
+    margin: 0;    
+}
+
+#remou {
+    background: url("/assets/img/remoulade.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+#zucker {
+    background: url("/assets/img/sugar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+#decision {
+    transition: color 2000ms; 
+}
+.right {
+    transform: scaleX(1);
+}
+.left {
+    transform: scaleX(-1);
+}
+.focused {
+    background: rgba(43, 36, 71, 0.514);
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+      flex-direction: column;
+    }
+
+    #decisionImage.imagePanel {
+        width: 100vw !important;
+        height: 33.333333vh;
+    }
+
+    .buyPanel {
+        width: 100vw;
+        height: 33.33333333vh;
+    }
+  }
